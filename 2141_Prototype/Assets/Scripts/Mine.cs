@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     public string target;
+    public GameObject playerGO;
     public Move playerRef;
 
 
@@ -12,7 +13,8 @@ public class Mine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerGO = GameObject.FindWithTag("PlayerTag");
+        playerRef = playerGO.GetComponent<Move>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,11 +24,6 @@ public class Mine : MonoBehaviour
             if (target == "PlayerTag")
             {
                 collision.gameObject.GetComponent<Move>().TakeDamage();
-                Destroy(gameObject);
-            }
-            else if (target == "Enemy")
-            {
-                collision.gameObject.GetComponent<Enemy>().TakeDamage();
                 Destroy(gameObject);
             }
         }

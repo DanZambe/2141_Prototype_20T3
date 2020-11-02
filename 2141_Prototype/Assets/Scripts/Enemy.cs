@@ -14,11 +14,14 @@ public class Enemy : MonoBehaviour
     public string colliderTag;
 
     public Move playerRef;
+    public GameObject playerGO;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        health = 2;
+        playerGO = GameObject.FindWithTag("PlayerTag");
+        playerRef = playerGO.GetComponent<Move>();
     }
 
 	// Update is called once per frame
@@ -27,13 +30,13 @@ public class Enemy : MonoBehaviour
 
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (colliderTag == collision.tag)
-        {
-            Death();
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (colliderTag == collision.tag)
+    //    {
+    //        Death();
+    //    }
+    //}
 
     public void TakeDamage()
     {

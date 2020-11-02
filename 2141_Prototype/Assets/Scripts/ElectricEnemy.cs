@@ -23,12 +23,12 @@ public class ElectricEnemy : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(mineTimer);
-            shoot();
+            MakeMine();
         }
     }
 
 
-    public void shoot()
+    public void MakeMine()
     {
         Instantiate(mine, transform.position, transform.rotation);
 
@@ -52,15 +52,10 @@ public class ElectricEnemy : MonoBehaviour
     {
         if (target == collision.tag)
         {
-            Debug.Log("collision detected");
+           // Debug.Log("collision detected");
             if (target == "PlayerTag")
             {
                 collision.gameObject.GetComponent<Move>().TakeDamage();
-            }
-            else if (target == "Enemy")
-            {
-                collision.gameObject.GetComponent<Enemy>().TakeDamage();
-                Destroy(gameObject);
             }
         }
     }
