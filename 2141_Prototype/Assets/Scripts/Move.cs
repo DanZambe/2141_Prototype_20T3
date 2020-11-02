@@ -13,6 +13,8 @@ public class Move : MonoBehaviour
     public Transform leftGun;
     public Transform rightGun;
 
+    public SpriteRenderer spriteRenderer;
+
     public int health = 3;
     public int minHealth = 0;
 
@@ -35,6 +37,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         moveSpeed = 5f;
         //Debug.Log(rightGun.transform.position);
     }
@@ -83,7 +86,9 @@ public class Move : MonoBehaviour
     IEnumerator Invulnerability()
     {
         invincible = true;
+        spriteRenderer.color = new Color(255f, 0f, 0f, 1f); // Set to opaque black
         yield return new WaitForSeconds(2);
+        spriteRenderer.color = new Color(255f, 255f, 255f, 1f); // Set to opaque black
         invincible = false;
     }
 
