@@ -15,7 +15,7 @@ public class PlayerBullet : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         Vector2 direction = new Vector2(transform.up.x, transform.up.y);
         rigidbody.velocity = direction * Time.fixedDeltaTime * speed;
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 4);
     }
 
     // Update is called once per frame
