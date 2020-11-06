@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
+using System.Security.Cryptography;
+using System.Collections.Specialized;
 
 public class Move : MonoBehaviour
 {
@@ -33,12 +35,16 @@ public class Move : MonoBehaviour
     public Image lifeTwo;
     public Image lifeThree;
 
+    public GameObject player;
+    public Transform startlocation;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        moveSpeed = 5f;
+        moveSpeed = 2.5f;
         //Debug.Log(rightGun.transform.position);
     }
 
@@ -87,6 +93,7 @@ public class Move : MonoBehaviour
     {
         invincible = true;
         spriteRenderer.color = new Color(255f, 0f, 0f, 1f); // Set to opaque black
+        //gameObject.transform.position = Vector3(0,-2,0);
         yield return new WaitForSeconds(2);
         spriteRenderer.color = new Color(255f, 255f, 255f, 1f); // Set to opaque black
         invincible = false;

@@ -15,17 +15,17 @@ public class StealthBomber : MonoBehaviour
 
 	public void Start()
 	{
-		shoot();
+		StartCoroutine(Shooting());
 	}
 
-	//IEnumerator Shooting()
-	//{
-	//    while (true)
-	//    {
-	//        yield return new WaitForSeconds(shootTimer);
-	//        shoot();
-	//    }
-	//}
+	IEnumerator Shooting()
+	{
+	    
+	    
+	        yield return new WaitForSeconds(shootTimer);
+	       shoot();
+	    
+	}
 
 	public void shoot()
     {

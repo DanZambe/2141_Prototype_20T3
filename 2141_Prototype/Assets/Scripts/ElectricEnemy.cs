@@ -10,15 +10,24 @@ public class ElectricEnemy : MonoBehaviour
 
     public Transform player;
     public float speed = 2f;
-    private float minDistance = 1f;
+    private float minDistance = .7f;
     private float range;
 
-
+    public GameObject playerGO;
     public GameObject mine;
 
     public float mineTimer;
 
-    IEnumerator Start()
+    public void Start()
+    {
+        
+        playerGO = GameObject.FindWithTag("PlayerTag");
+        playerRef = playerGO.GetComponent<Move>();
+        player = playerGO.transform;
+        StartCoroutine(CreateMine());
+    }
+
+    IEnumerator CreateMine()
     {
         while (true)
         {
