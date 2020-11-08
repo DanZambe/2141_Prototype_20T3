@@ -41,7 +41,7 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         moveSpeed = 2.5f;
@@ -93,7 +93,7 @@ public class Move : MonoBehaviour
     {
         invincible = true;
         spriteRenderer.color = new Color(255f, 0f, 0f, 1f); // Set to opaque black
-        //gameObject.transform.position = Vector3(0,-2,0);
+        gameObject.transform.position = new Vector3(0,-2,0);
         yield return new WaitForSeconds(2);
         spriteRenderer.color = new Color(255f, 255f, 255f, 1f); // Set to opaque black
         invincible = false;
@@ -108,13 +108,17 @@ public class Move : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (health == 2)
+        if (health == 3)
 		{
             lifeOne.enabled = false;
 		}
-		else if (health == 1)
+		else if (health == 2)
 		{
             lifeTwo.enabled = false;
+        }
+        else if (health == 1)
+        {
+            lifeThree.enabled = false;
         }
 
     }

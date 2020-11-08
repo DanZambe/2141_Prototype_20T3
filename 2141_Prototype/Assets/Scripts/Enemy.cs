@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
             }
             isDead = true;
             Destroy(gameObject);
-            playerRef.kills = playerRef.kills + 1;
+            //playerRef.kills = playerRef.kills + 1;
         }
     }
 }
