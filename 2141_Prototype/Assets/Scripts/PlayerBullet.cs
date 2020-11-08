@@ -9,6 +9,8 @@ public class PlayerBullet : MonoBehaviour
     private Rigidbody2D rigidbody;
     public int speed = 300;
 
+    public int myDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class PlayerBullet : MonoBehaviour
             Debug.Log("collision detected");
             if (target == "PlayerTag")
 			{
+                collision.gameObject.GetComponent<Move>().damage = myDamage;
+
                 collision.gameObject.GetComponent<Move>().TakeDamage();
                 Destroy(gameObject);
 			}

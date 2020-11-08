@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4261690840143054612}
   - component: {fileID: -4124184684286068402}
   - component: {fileID: -8095568538109717227}
+  - component: {fileID: 4808970841068429090}
   m_Layer: 0
   m_Name: BossCenter
   m_TagString: Untagged
@@ -88,13 +89,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4261690840143054613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff019245a29aa0948b6aee1b59b9d835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: PlayerTag
   speed: 100
+--- !u!114 &4808970841068429090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261690840143054613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e36fa113512414782f9dd74b9c5e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: PlayerTag
+  speed: 100
+  myDamage: 10
 --- !u!1 &4798675875501458749
 GameObject:
   m_ObjectHideFlags: 0

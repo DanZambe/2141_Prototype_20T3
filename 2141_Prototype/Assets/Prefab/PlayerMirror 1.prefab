@@ -214,6 +214,11 @@ MonoBehaviour:
   colliderTag: PlauerTag
   playerRef: {fileID: 0}
   playerGO: {fileID: 0}
+  eyeEnemy: 0
+  electricEnemy: 0
+  playerMirror: 1
+  waveManagerGO: {fileID: 0}
+  waveManagerRef: {fileID: 0}
 --- !u!114 &7809028424882114993
 MonoBehaviour:
   m_ObjectHideFlags: 0

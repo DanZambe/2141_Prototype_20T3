@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: Enemy
   speed: 300
+  myDamage: 1
 --- !u!50 &4261690840143054612
 Rigidbody2D:
   serializedVersion: 4

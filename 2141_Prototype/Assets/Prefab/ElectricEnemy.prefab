@@ -96,12 +96,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  minHealth: 1
+  minHealth: 0
   damage: 1
   isDead: 0
   colliderTag: PlayerTag
   playerRef: {fileID: 0}
   playerGO: {fileID: 0}
+  eyeEnemy: 0
+  electricEnemy: 1
+  playerMirror: 0
+  waveManagerGO: {fileID: 0}
+  waveManagerRef: {fileID: 0}
 --- !u!114 &7501012869938026886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +123,7 @@ MonoBehaviour:
   playerRef: {fileID: 0}
   player: {fileID: 0}
   speed: 2
+  playerGO: {fileID: 0}
   mine: {fileID: 4102552508762476537, guid: 6084a721598b8094baea1daad9f61480, type: 3}
   mineTimer: 3
 --- !u!61 &7501012869938026885

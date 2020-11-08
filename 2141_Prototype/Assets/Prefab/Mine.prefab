@@ -100,12 +100,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  minHealth: 1
+  minHealth: 0
   damage: 1
   isDead: 0
   colliderTag: PlayerTag
   playerRef: {fileID: 0}
   playerGO: {fileID: 0}
+  eyeEnemy: 0
+  electricEnemy: 0
+  playerMirror: 0
+  waveManagerGO: {fileID: 0}
+  waveManagerRef: {fileID: 0}
 --- !u!114 &4102552508762476536
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4261690840143054612}
   - component: {fileID: 3413876834241058820}
   m_Layer: 0
-  m_Name: bOSStEsty
+  m_Name: BossFast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: PlayerTag
   speed: 300
+  myDamage: 1
 --- !u!50 &4261690840143054612
 Rigidbody2D:
   serializedVersion: 4
