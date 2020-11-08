@@ -5,6 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
 using System.Security.Cryptography;
 using System.Collections.Specialized;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Move : MonoBehaviour
     public int minHealth = 0;
 
     public int damage = 1;
+
+    public int damageDealt;
 
     public bool isDead;
     public bool invincible;
@@ -106,6 +109,7 @@ public class Move : MonoBehaviour
             lifeThree.enabled = false;
             isDead = true;
             Destroy(gameObject);
+            SceneManager.LoadScene(0);
         }
 
         if (health == 3)
